@@ -17,8 +17,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - run: npm install
-    - run: npx parcel build index.html
+    - run: yarn
+    - run: yarn parcel build index.html
       env:
         CI: true
     - name: Deploy to GitHub Pages

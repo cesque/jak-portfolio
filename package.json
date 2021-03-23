@@ -1,7 +1,4 @@
 {
-  "devDependencies": {
-    "parcel": "^2.0.0-beta.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +12,9 @@
     "url": "https://github.com/cesque/jak-portfolio/issues"
   },
   "homepage": "https://github.com/cesque/jak-portfolio#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2",
+    "sass": "^1.32.8"
+  }
 }
