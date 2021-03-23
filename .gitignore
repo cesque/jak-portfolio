@@ -1,6 +1,7 @@
 dist/
 .cache/
 .vscode/
+.parcel-cache/
 
 node_modules/
 package-lock.json
