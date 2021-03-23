@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: 12.x
     - run: yarn
-    - run: yarn parcel build index.html
+    - run: yarn parcel build index.html --public-url jak-portfolio
       env:
         CI: true
     - name: Deploy to GitHub Pages
