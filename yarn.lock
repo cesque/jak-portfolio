@@ -1477,6 +1477,15 @@
     react-refresh "^0.9.0"
     semver "^5.4.1"
 
+"@parcel/transformer-sass@^2.0.0-nightly.632":
+  version "2.0.0-nightly.632"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-sass/-/transformer-sass-2.0.0-nightly.632.tgz#43a7a167f4e60407336291b2c30b1b4c5b94331c"
+  integrity sha512-wdl2XNshmw1IFzghmjGnUFH70FrMZ/64ZE3LGmRngZrOVUvsugboSdf9LcAzv1x0IA57Hl7W/sxDvIzn9HVsJg==
+  dependencies:
+    "@parcel/plugin" "2.0.0-nightly.632+ed726670"
+    "@parcel/source-map" "2.0.0-alpha.4.21"
+    sass "^1.32.4"
+
 "@parcel/types@2.0.0-nightly.632+ed726670":
   version "2.0.0-nightly.632"
   resolved "https://registry.yarnpkg.com/@parcel/types/-/types-2.0.0-nightly.632.tgz#0012e88caed7ed0fc8e6e2790d3a870c7e0c1210"
@@ -5259,7 +5268,7 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.32.8:
+sass@^1.32.4, sass@^1.32.8:
   version "1.32.8"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.32.8.tgz#f16a9abd8dc530add8834e506878a2808c037bdc"
   integrity sha512-Sl6mIeGpzjIUZqvKnKETfMf0iDAswD9TNlv13A7aAF3XZlRPMq4VvJWBC2N2DXbp94MQVdNSFG6LfF/iOXrPHQ==

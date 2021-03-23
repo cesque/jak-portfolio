@@ -14,9 +14,9 @@
   "homepage": "https://github.com/cesque/jak-portfolio#readme",
   "description": "",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-nightly.632",
+    "parcel": "^2.0.0-nightly.630",
     "sass": "^1.32.8"
   },
-  "dependencies": {
-    "parcel": "^2.0.0-nightly.630"
-  }
+  "dependencies": {}
 }
