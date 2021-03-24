@@ -347,7 +347,7 @@ section {
 
 
     .dash {
-        height: 1px;
+        height: 2px;
         width: 10px;
         background: $text;
         display: inline-block;
@@ -413,11 +413,27 @@ section {
 
 
 .end {
+    text-align: center;
+
     p {
-        padding: 20px 80px;
+        padding: 0px 80px;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+        }
         
         span {
             opacity: 0.5;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+            padding-top: 2px;
+            color: $textTheme;
+            fill: $textTheme;
         }
     }
 }
