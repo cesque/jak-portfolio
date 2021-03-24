@@ -1,5 +1,3 @@
-import styling from "bundle-text:./style.scss";
-
 const colors = [
     `#079992`,
     `#b71540`,
