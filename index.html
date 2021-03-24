@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Jaking you</title>
+    <title>Jak Barnes</title>
     <link rel="stylesheet" href="style.scss">
     <link rel="icon" 
           type="image/png" 
@@ -233,17 +233,24 @@
             <h2>Game Jams</h2>
 
             <div class="projects">
-                <a href="https://jenaa.itch.io/lo-fi-beats-to-find-objects-to" class="project">
+                
+                <div class="project">
                     <div class="title">
-                        lo-fi beats to find objects to
+                        <span class="name">
+                            <a href="https://jenaa.itch.io/lo-fi-beats-to-find-objects-to">
+                                lo-fi beats to find objects to
+                            </a>
+                        </span>
+                        <span class="dash"></span>
+                        <span class="quick-description">a comfy found-object game</span>
                     </div>
                     <div class="image">
                         <img src="./images/lofibeats.jpg" width=400>      
                     </div>
                     <div class="description">
-                        Radical Forge entry for the 2021 Global Game Jam. The theme was "Lost & Found".
+                        A weekend long submission for the 2021 Global Game Jam. The theme was "Lost & Found".
                     </div>
-                </a>
+                </div>
 
                 <div class="seperator reversed">
                     <div class="scissors">✂️</div>
@@ -251,15 +258,23 @@
                     <div class="line"></div>
                 </div>
 
-                <a href="https://syphonx.itch.io/snaaake" class="project">
+                <div class="project reversed">
                     <div class="title">
-                        Snaaake! - GMTK 2020 Jam Entry
+                        <span class="name">
+                            <a href="https://syphonx.itch.io/snaaake">
+                                Snaaake! - GMTK 2020 Jam
+                            </a>
+                        </span>
+                        <span class="dash"></span>
+                        <span class="quick-description">A chaotic snake clone.</span>
                     </div>
-                    <img src="">                
+                    <div class="image">
+                        <video src="./images/snaaake.webm" muted loop>
+                    </div>      
                     <div class="description">
                         My entry for the 2020 GMTK game jam, The theme was “Out of Control”.
                     </div>
-                </a>
+                </div>
 
                 <div class="seperator">
                     <div class="scissors">✂️</div>
@@ -267,36 +282,53 @@
                     <div class="line"></div>
                 </div>
 
-                <a href="https://syphonx.itch.io/bong-gmtk-2019-jam-entry" class="project">
+                <div class="project">
                     <div class="title">
-                        Bong! - GMTK 2019 Jam Entry
+                        <span class="name">
+                            <a href="https://syphonx.itch.io/bong-gmtk-2019-jam-entry">
+                                Bong! - GMTK 2019 Jam
+                            </a>
+                        </span>
+                        <span class="dash"></span>
+                        <span class="quick-description">A chaotic snake clone.</span>
                     </div>
-                    <img src="">                
+                    <div class="image">
+                        <video src="./images/bong.webm" muted loop>
+                    </div>  
                     <div class="description">
                         This is my entry for the GMTK game jam, The theme for GMTK Game Jam 2019 is “Only One”.
                     </div>
-                </a>
+                </div>
+                
             </div>
         </section>
 
         <div class="image-seperator" style="background-image: url('./images/autumn-river.jpg'); background-size: cover;"></div>
         
         <section class="open-source prose">
+
             <h2>Open Source</h2>
 
-            <a href="test" class="project">
+            <div class="project">
                 <div class="title">
-                    <span class="name">rnet</span>
+                    <span class="name">
+                        <a href="https://github.com/raysan5/raylib/blob/master/src/rnet.h">
+                            rnet
+                        </a>                        
+                    </span>
                     <span class="dash"></span>
                     <span class="quick-description">a <code>raylib</code> networking module</span>
                 </div>
-                <img src="">                
+                <div class="image">
+                    <img src="./images/raylib_logo.png" >
+                </div>             
                 <div class="description">
                     I created simple and easy-to-use network module for
                     <code>raylib</code> (<code>raylib</code> is a simple
                     and easy-to-use library to enjoy videogames programming).
                 </div>
-            </a>
+            </div>
+
         </section>
 
         <section class="open-source prose">
@@ -304,7 +336,9 @@
 
             <a href="test" class="project">
                 <div class="title">Photography</div>
-                <img src="">                
+                <div class="image">
+                    <img src="./images/tunnelme.jpg" width=400>
+                </div>
                 <div class="description">
                     I'm also an amateur photographer, and love to get out into nature
                     to take pictures of its beauty. In fact, all the photos on this page
@@ -312,19 +346,6 @@
                 </div>
             </a>
 
-            <div class="seperator reversed">
-                <div class="scissors">✂️</div>
-                <div class="spacer"></div>
-                <div class="line"></div>
-            </div>
-
-            <a href="test" class="project">
-                <div class="title">Some other hobby?</div>
-                <img src="">                
-                <div class="description">
-                    IDK what else I like to do rofl
-                </div>
-            </a>
         </section>
 
         <div class="seperator">
@@ -335,10 +356,17 @@
 
         <section class="end prose">
             <p>
-                <span>That's it! If any of this caught your eye, send me a message on</span>
-                <a href="https://twitter.com/jakbarnes">twitter</a><span>, or</span>
-                <a href="mailto:contact@jakbarnes.co.uk">email me</a>
-                <span>. Thanks for reading! 😊</span>
+                <span>That's it!</span>
+            </p>
+            <p>
+                <span>If any of this caught your eye, send me a message on</span>
+                <span>
+                    <a href="https://twitter.com/jakbarnes">twitter</a>, or</span>
+                    <a href="mailto:contact@jakbarnes.co.uk">email me</a>.
+                </span>
+            </p>
+            <p>
+                <span>Thanks for reading! 😊</span>
             </p>
         </section>
     </main>
