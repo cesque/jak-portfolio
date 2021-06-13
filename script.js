@@ -15,6 +15,7 @@ let colorIndex = 0
 document.addEventListener('DOMContentLoaded', () => {
     console.log('loaded')
     document.querySelector('.header__hero .name').addEventListener('click', changeTheme)
+    document.querySelector('.profile').addEventListener('click', changeTheme)
 
     let isDesktop = window.matchMedia('(min-width: 600px)').matches
 
@@ -23,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for(let i = 0; i < projects.length; i++) {
         let project = projects[i]
         let video = project.querySelector('video')
-
 
         if(video) {
             if(isDesktop) {
@@ -41,20 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-// function getRandomColour() {
-//     // let r = Math.floor(Math.random() * 255);
-//     // let g = Math.floor(Math.random() * 255);
-//     // let b = Math.floor(Math.random() * 255);
-//     // return `rgb(${r}, ${g}, ${b})`;
-
-//     let color = colors[Math.floor(Math.random() * colors.length)]
-
-//     return color
-// }
-
 function changeTheme(event) {
     colorIndex = (colorIndex + 1) % colors.length
     document.documentElement.style.setProperty('--textTheme', colors[colorIndex])
-
     event.preventDefault()
 }

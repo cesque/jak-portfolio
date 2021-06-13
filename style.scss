@@ -7,6 +7,8 @@ $themeVariable: white;
 $textVariable: #222f3e;
 $textReversedVariable: #222f3e;
 $textThemeVariable: #00d2d3;
+// // $textThemeVariable: #2ecc71;
+// $textThemeVariable: #38ada9;
 
 $bg: var(--bg);
 $theme: var(--theme);
@@ -33,6 +35,14 @@ a {
     &:hover {
         text-decoration: underline;
         text-decoration-thickness: 2px;
+    }
+}
+
+br.desktop {
+    display: none;
+
+    @media (min-width: $breakpoint) {
+        display: inline;
     }
 }
 
@@ -67,7 +77,6 @@ body {
         color: $bg;
     }
 }
-
 
 .seperator {
     width: 100%;
@@ -108,19 +117,26 @@ header {
 
 .header__hero {
     background: $theme;
-    padding: 50px;
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     color: $textReversed;
     transition: background $themeTransition ease-in-out, color $themeTransition ease-in-out;
     position: relative;
+    width: 100%;
+    
+    @media (min-width: $breakpoint) {
+        padding: 50px;
+        align-items: center;
+    }
 
     h1 {
         font-family: 'Volkhov';
         font-size: 7rem;
+        line-height: 1;
         margin: 0;
+        margin-bottom: 20px;
     }
 
     h2 {
@@ -131,6 +147,13 @@ header {
         position: relative;
         margin: 7rem 0;
         margin-top: 4rem;
+        padding: 50px;
+        min-height: 70vh;
+
+        @media (min-width: $breakpoint) {
+            padding: 0;
+            min-height: 0;
+        }
     }
 
     .name {
@@ -163,10 +186,18 @@ header {
 
 .profile {
     border-radius: 10px;
+    margin: 0 20px;
     position: relative;
-    
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+  
     .base {
-        filter: grayscale(100%) brightness(125%) contrast(130%);
+        // filter: grayscale(100%) brightness(125%) contrast(130%); // jak1
+        filter: grayscale(100%) brightness(80%) contrast(100%); // jak1
         margin: 0;
         padding: 0;
         display: block;
@@ -247,11 +278,16 @@ header {
 }
 
 .about {
-    font-size: 2rem;
-    padding: 70px 50px;
+    font-size: 1.75rem;
+    padding: 70px 20px;
     max-width: $maxWidth;
     margin: 0 auto;
     text-align: center;
+
+    @media (min-width: $breakpoint) {
+        font-size: 2rem;
+        padding: 70px 50px;
+    }
 }
 
 section {
@@ -262,18 +298,42 @@ section {
     
     h2 {
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-family: $serif;
+
+        padding: 20px 0;
+        background: $textTheme;
+        color: white;
+
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        
+        @media (min-width: $breakpoint) {
+            font-size: 3rem;
+            // padding: 0;
+            // background: transparent;
+            // color: $text;
+        }
     }
 }
 
 .image-seperator {
-    height: 200px;
+    height: 300px;
     width: 100%;
     margin: 40px 0;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center center;
+    background-size: cover;
     border: none;
+
+    // @supports(background-attachment: fixed) {
+    //     background-attachment: fixed;
+    // } // ios 😡
+
+    @media (min-width: $breakpoint) {
+        background-attachment: fixed;
+    }
 }
 
 .skills {
@@ -308,8 +368,6 @@ section {
         /1fr;
 
     &:hover {
-        border: 1px solid #f4f4f4;
-        box-shadow: 0 4px 10px -3px rgba(0,0,0,.2);
         text-decoration: none;
     }
 
@@ -328,7 +386,7 @@ section {
             text-transform: uppercase;
             letter-spacing: 0.1rem;
             margin-right: 10px;
-            margin-bottom: 3px;
+            margin-bottom: 6px;
             background: $textTheme;
             color: $bg;
         }
@@ -375,16 +433,16 @@ section {
     .description {
         grid-area: desc;
         margin: 10px 0px;
+        font-size: 0.9em;
+
+        @media (min-width: $breakpoint) {
+            font-size: 1em;
+        }
 
         .aside {
             opacity: 0.3;
         }
-    }
 
-    &:hover {
-        .image img {
-            transform: scale(1.05);
-        }
     }
 
     @media (min-width: $breakpoint) {
@@ -408,15 +466,34 @@ section {
         .image {
             max-width: 300px;
         }
+
+        &:hover {
+            border: 1px solid #f4f4f4;
+            box-shadow: 0 4px 10px -3px rgba(0,0,0,.2);
+            text-decoration: none;
+    
+            .image img {
+                transform: scale(1.05);
+            }
+        }
     }
 }
 
+a[href].project .name {
+    text-decoration: underline;
+    // text-decoration-color: transparent;
+    text-decoration-color: $textTheme;
+    // transition: text-decoration-color 0.1s ease;
+}
+
+// a[href].project:hover .name {
+// }
 
 .end {
     text-align: center;
 
     p {
-        padding: 0px 80px;
+        padding: 0px 15vw;
 
         a {
             display: inline-flex;
@@ -452,26 +529,75 @@ footer {
         color: #ee5253;
         font-size: 1.2rem;
         vertical-align: middle;
+        display: inline-block;
+    }
+
+    a {
+        position: relative;
+    }
+
+    a:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    a:hover:after {
+        opacity: 1;
+    }
+
+    .jakbarnes {
+        $gradient: linear-gradient(to right, #00d2ff, #2b6bcc);
+        background-image: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+
+        &:after {
+            background: $gradient;
+        }
     }
     
     .zonalhaz {
-        background-image: linear-gradient(to right, #00d2d3, #10ac84);
+        $gradient: linear-gradient(to right, #00d2d3, #10ac84);
+        background-image: $gradient;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
+        &:after {
+            background: $gradient;
+        }
     }
 
     .cesque {
-        background-image: linear-gradient(to right, #ff9f43, #ee5253);
+        $gradient: linear-gradient(to right, #ff9f43, #ee5253);
+        background-image: $gradient;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
+        &:after {
+            background: $gradient;
+        }
     }
 
     .coins {
-        background-image: linear-gradient(to right, #f368e0, #a55eea, #5f27cd);
+        $gradient: linear-gradient(to right, #f368e0, #a55eea, #5f27cd);
+        background-image: $gradient;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
+        &:after {
+            background: $gradient;
+        }
     }
 }
