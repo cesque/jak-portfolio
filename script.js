@@ -13,7 +13,6 @@ const colors = [
 let colorIndex = 0
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('loaded')
     document.querySelector('.header__hero .name').addEventListener('click', changeTheme)
     document.querySelector('.profile').addEventListener('click', changeTheme)
 
