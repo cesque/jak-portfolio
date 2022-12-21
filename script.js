@@ -12,9 +12,17 @@ const colors = [
 
 let colorIndex = 0
 
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    colorIndex = randomNumber(0, colors.length);
+    changeTheme()
+    
     document.querySelector('.header__hero .name').addEventListener('click', changeTheme)
-    document.querySelector('.profile').addEventListener('click', changeTheme)
+    document.querySelector('.header__profile').addEventListener('click', changeTheme)
 
     let isDesktop = window.matchMedia('(min-width: 600px)').matches
 
@@ -43,5 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function changeTheme(event) {
     colorIndex = (colorIndex + 1) % colors.length
     document.documentElement.style.setProperty('--textTheme', colors[colorIndex])
-    event.preventDefault()
+    if (event) {
+        event.preventDefault()
+    }
 }
