@@ -38,17 +38,6 @@ a {
     }
 }
 
-.project {
-    text-decoration: none;
-    color: $textTheme;
-    font-weight: bold;
-
-    &:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-    }
-}
-
 br.desktop {
     display: none;
 
@@ -321,9 +310,9 @@ section {
         margin: auto;
         
         @media (min-width: $breakpoint) {
-            margin: auto;        
-            padding: 0;
-            color: $text;
+            // margin: auto;        
+            // padding: 0;
+            // color: $text;
         }
     }
 
@@ -376,6 +365,16 @@ section {
 }
 
 .project {
+
+    text-decoration: none;
+    color: $textTheme;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
+
     padding: 2rem;
     color: $text;
     font-weight: normal;
@@ -405,7 +404,11 @@ section {
     .nda {
         filter: blur(8px)
     }
-    
+
+    .center {            
+        text-align: center;
+    }
+   
     .tags {
         list-style: none;
         display: flex;
@@ -439,6 +442,7 @@ section {
     }
     
     .name {
+        text-decoration-color: $textTheme;
         font-weight: bold;
         color: $textTheme;
     }
@@ -449,6 +453,11 @@ section {
         background: $text;
         display: inline-block;
         vertical-align: middle;
+    }
+    
+    .footer
+    {
+        text-align: center;
     }
 
     .image {
@@ -512,8 +521,8 @@ section {
             /1fr auto;
         }
 
-        .title {            
-            text-align: start;
+        .center {            
+            text-align: center;
         }
 
         .image {
@@ -531,13 +540,6 @@ section {
         }
     }
 }
-
-.project .name {
-    text-decoration-color: $textTheme;
-}
-
-// a[href].project:hover .name {
-// }
 
 .end {
     text-align: center;
@@ -565,14 +567,8 @@ section {
     }
 }
 
-.footer
-{
-    text-align: center;
-}
-
 footer {
     padding: 50px;
-    margin-top: 30vh;
     text-align: center;
 
     .copyright {
