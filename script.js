@@ -17,7 +17,6 @@ function randomNumber(min, max) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('loaded')
 
     colorIndex = randomNumber(0, colors.length);
     changeTheme()
