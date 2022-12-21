@@ -38,6 +38,17 @@ a {
     }
 }
 
+.project {
+    text-decoration: none;
+    color: $textTheme;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
+}
+
 br.desktop {
     display: none;
 
@@ -127,7 +138,7 @@ header {
     width: 100%;
     
     @media (min-width: $breakpoint) {
-        padding: 50px;
+        padding: 20px;
         align-items: center;
     }
 
@@ -161,7 +172,6 @@ header {
         transition: background $themeTransition ease-in-out, color $themeTransition ease-in-out;
         font-weight: bold;
         cursor: pointer;
-        text-decoration: underline;
         user-select: none;
 
         // &:hover {
@@ -179,14 +189,26 @@ header {
         }
     }
 
+    .header__quote {
+        opacity: 0.5;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        font-style: italic;
+        
+        @media (min-width: $breakpoint) {
+            justify-content: center;
+        }
+    }
+
     .fullstop {
         opacity: 0.2;
     }
 }
 
-.profile {
+.header__profile {
     border-radius: 10px;
-    margin: 0 20px;
+    margin: 25px;
     position: relative;
     cursor: pointer;
     display: flex;
@@ -197,7 +219,8 @@ header {
   
     .base {
         // filter: grayscale(100%) brightness(125%) contrast(130%); // jak1
-        filter: grayscale(100%) brightness(80%) contrast(100%); // jak1
+        // filter: grayscale(100%) brightness(80%) contrast(100%); // jak1
+        filter: brightness(80%) contrast(100%); // jak1
         margin: 0;
         padding: 0;
         display: block;
@@ -225,8 +248,8 @@ header {
 }
 
 .sticky-header {
-    background: $theme;
-    padding: 20px;
+    background: $theme;    
+    padding: 5px;
     color: $textReversed;
     transition: background $themeTransition ease-in-out, color $themeTransition ease-in-out;
     display: flex;
@@ -265,16 +288,6 @@ header {
         width: 30px;
         height: 30px;
     }
-
-    a.fivehundredpx {
-        border: 1px solid $textReversed;
-        // background: $textReversed;
-
-        // svg {
-        //     color: $theme;
-        //     fill: $theme;
-        // }
-    }
 }
 
 .about {
@@ -290,12 +303,22 @@ header {
     }
 }
 
+.about-description {
+    font-size: 0.8em;
+    opacity: 0.6;
+    font-style: italic;
+}
+
 section {
     padding: 40px 0;
     width: 100%;
-    max-width: $maxWidth;
     margin: 0 auto;
     
+    .project {
+        max-width: $maxWidth;
+        margin: auto;
+    }
+
     h2 {
         text-align: center;
         font-size: 2.5rem;
@@ -371,6 +394,10 @@ section {
         text-decoration: none;
     }
 
+    .nda {
+        filter: blur(8px)
+    }
+    
     .tags {
         list-style: none;
         display: flex;
@@ -396,13 +423,16 @@ section {
         grid-area: title;
         font-family: $serif;
         font-size: 2rem;
+
+        .duration {
+            opacity: 0.3;
+        }
     }
     
     .name {
         font-weight: bold;
         color: $textTheme;
     }
-
 
     .dash {
         height: 2px;
@@ -416,13 +446,13 @@ section {
         grid-area: img;
         // align-self: center;
         height: 100%;
-        
+    
         overflow: hidden;
 
         img, video {
             height: 100%;
             width: 100%;
-            max-height: 100%;
+            max-height: 600px;
             object-position: center center;
             object-fit: cover;
             transform: scale(1);
@@ -442,7 +472,14 @@ section {
         .aside {
             opacity: 0.3;
         }
+    }
 
+    .footer {
+        grid-area: footer;
+
+        .aside {
+            opacity: 0.3;
+        }
     }
 
     @media (min-width: $breakpoint) {
@@ -452,6 +489,7 @@ section {
             'img tags' auto
             'img title' auto
             'img desc' 1fr
+            'footer footer' auto
             /auto 1fr;
 
         // &:nth-child(even), 
@@ -460,6 +498,7 @@ section {
             'tags img' auto
             'title img' auto
             'desc img' 1fr
+            'footer footer' auto
             /1fr auto;
         }
 
@@ -479,11 +518,8 @@ section {
     }
 }
 
-a[href].project .name {
-    text-decoration: underline;
-    // text-decoration-color: transparent;
+.project .name {
     text-decoration-color: $textTheme;
-    // transition: text-decoration-color 0.1s ease;
 }
 
 // a[href].project:hover .name {
@@ -493,7 +529,7 @@ a[href].project .name {
     text-align: center;
 
     p {
-        padding: 0px 15vw;
+        padding: 0px 10vw;
 
         a {
             display: inline-flex;
@@ -515,6 +551,10 @@ a[href].project .name {
     }
 }
 
+.footer
+{
+    text-align: center;
+}
 
 footer {
     padding: 50px;
@@ -551,53 +591,53 @@ footer {
     a:hover:after {
         opacity: 1;
     }
+}
 
-    .jakbarnes {
-        $gradient: linear-gradient(to right, #00d2ff, #2b6bcc);
-        background-image: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        font-weight: bold;
+.jakbarnes {
+    $gradient: linear-gradient(to right, #00d2ff, #2b6bcc);
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
 
-        &:after {
-            background: $gradient;
-        }
+    &:after {
+        background: $gradient;
     }
-    
-    .zonalhaz {
-        $gradient: linear-gradient(to right, #00d2d3, #10ac84);
-        background-image: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+}
 
-        &:after {
-            background: $gradient;
-        }
+.zonalhaz {
+    $gradient: linear-gradient(to right, #00d2d3, #10ac84);
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:after {
+        background: $gradient;
     }
+}
 
-    .cesque {
-        $gradient: linear-gradient(to right, #ff9f43, #ee5253);
-        background-image: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+.cesque {
+    $gradient: linear-gradient(to right, #ff9f43, #ee5253);
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 
-        &:after {
-            background: $gradient;
-        }
+    &:after {
+        background: $gradient;
     }
+}
 
-    .coins {
-        $gradient: linear-gradient(to right, #f368e0, #a55eea, #5f27cd);
-        background-image: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+.coins {
+    $gradient: linear-gradient(to right, #f368e0, #a55eea, #5f27cd);
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 
-        &:after {
-            background: $gradient;
-        }
+    &:after {
+        background: $gradient;
     }
 }

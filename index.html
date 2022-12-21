@@ -18,10 +18,11 @@
                 <h1>Hi, I'm <span class="name">Jak</span><span class="fullstop">.</span></h1>
                 <div class="name-hover">yes, without the c</div>
             </div>
-            <div class="profile">
-                <img class="base" src="./images/jak2.jpg">
-                <div class="duotone duotone--lo"></div>
-                <div class="duotone duotone--hi"></div>
+            <div class="header__profile">
+                <img class="base" src="./images/me_new.jpg" width="420">
+            </div>
+            <div class="header__quote">
+                Forever preoccupied with whether I could, that I don't stop to think if I should.
             </div>
         </div>
     </header>
@@ -36,13 +37,13 @@
         <div class="about prose">
             <p>
                 Hi, I'm <b>Jak Barnes</b>!
-            <p/>
+            </p>
             <p> 
-                I'm a <code>C++</code>/<code>C#</code> programmer, currently<br class="desktop">
+                I'm a Senior Engineer, currently<br class="desktop">
                 working at <a href="https://www.radicalforge.com/">Radical Forge</a>.
             </p>
             <p>
-                I enjoy playing games, writing code & love to tinker! I'm also an amateur musician 🥁 & photographer 📷
+                Welcome to my ✨ portfolio! ✨
             </p>
         </div>
 
@@ -50,7 +51,33 @@
             <h2>Commercial Games</h2>
 
             <div class="projects">
-                <a class="project">
+
+                <div class="project">
+                    <ul class="tags">
+                        <li class="tag tech">Under NDA</li>
+                    </ul>
+                    <div class="title">
+                        <span class="name nda">Bee Movie</span>
+                        <span class="dash"></span>
+                        <span class="quick-description nda">Ya like jazz?</span>
+                    </div>
+                    <div class="image">
+                        <img src="./images/top_secret.jpg" width=400>
+                    </div>
+                    <div class="description nda">
+                        According to all known laws of aviation, there is no way a bee should be able to fly.
+                        Its wings are too small to get its fat little body off the ground.
+                        The bee, of course, flies anyway because bees don't care what humans think is impossible.
+                    </div>
+                </div>
+
+                <div class="seperator">
+                    <div class="scissors">✂️</div>
+                    <div class="spacer"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="project">
                     <ul class="tags">
                         <li class="tag tech">Unreal Engine</li>
                         <li class="tag platform">PC</li>
@@ -65,11 +92,12 @@
                         <img src="./images/seaofthieves.jpg" width=400>
                     </div>
                     <div class="description">
-                        I'm currently working on <b>Sea of Thieves</b>, Rare's
-                        freeform buccaneering <i>"pirate experience"</i>. Details of my
-                        work on this are being kept under wraps <span class="aside">(for now!)</span>.
+                        Whilst working on <a class="link" href="https://www.seaofthieves.com/">Sea of Thieves</a> I helped <i>ship</i> a wide range of content, most notably <a href="https://www.youtube.com/watch?v=i8KVJGJQBPU">A Pirates Life</a>
+                        and <a href="https://www.youtube.com/watch?v=UJd72ykl-Ac">Season 7: Captaincy</a>. Additional support included <b>new gameplay features</b>, <b>performance optimisations</b> &amp; <b>accessibility improvements</b>.
+                        <br></br>
+                        <span class="aside">Sea of Thieves: A Pirate's Life was in collaboration with Disney to make a "Pirates of the Caribbean" themed adventure.</span>
                     </div>
-                </a>
+                </div>
 
                 <div class="seperator reversed">
                     <div class="scissors">✂️</div>
@@ -77,12 +105,11 @@
                     <div class="line"></div>
                 </div>
 
-                <a class="project reversed">
+                <div class="project reversed">
                     <ul class="tags">
-                        <li class="tag platform">PC</li>
-                        <li class="tag platform">Oculus Rift</li>
-                        <li class="tag platform">Oculus Quest</li>
-                        <li class="tag platform">HTC Vive</li>
+                        <li class="tag tech">Unreal Engine</li>
+                        <li class="tag platform">PC VR</li>
+                        <li class="tag platform">Mobile VR</li>
                     </ul>
                     <div class="title">
                         <span class="name">Spaceteam VR</span>
@@ -93,9 +120,9 @@
                         <img src="https://cdn.akamai.steamstatic.com/steam/apps/866770/capsule_616x353.jpg?t=1610707237" width=400>
                     </div>
                     <div class="description">
-                        Released on all major VR platforms. I worked on almost every aspect of the game, including <b>Gameplay</b>, <b>AI</b>, <b>Tools</b>, <b>Systems</b> &amp; <b>Localisation</b>.
+                        Released on all major VR platforms. I worked on almost every aspect of the game, including <b>gameplay</b>, <b>AI</b>, <b>tools</b>, <b>systems</b> &amp; <b>localisation</b>.
                     </div>
-                </a>
+                </div>
                 
                 <div class="seperator">
                     <div class="scissors">✂️</div>
@@ -103,7 +130,7 @@
                     <div class="line"></div>
                 </div>
 
-                <a href="https://i.imgur.com/ot4CEFp.png" class="project">
+                <div class="project">
                     <ul class="tags">
                         <li class="tag tech">Unity</li>
                         <li class="tag platform">PC</li>
@@ -123,7 +150,7 @@
                         I implemented a bunch of core <b>gameplay</b> features,
                         with a heavy focus on <b>AI</b>.
                     </div>
-                </a>
+                </div>
 
                 <div class="seperator reversed">
                     <div class="scissors">✂️</div>
@@ -131,8 +158,9 @@
                     <div class="line"></div>
                 </div>
 
-                <a class="project reversed">
+                <div class="project reversed">
                     <ul class="tags">
+                        <li class="tag tech">In-House Engine</li>
                         <li class="tag platform">Android</li>
                         <li class="tag platform">iOS</li>
                         <li class="tag tech">MonkeyX</li>
@@ -149,21 +177,83 @@
                         A football management game for mobile, released in 2018. I worked on integrating <b>3rd party SDKs</b> 
                         and core <b>engine</b> functionality.
                     </div>
-                </a>
+                </div>
             </div>
         </section>
-
-        <div class="image-seperator" style="background-image: url('images/equal-rites.jpg'); background-size: cover"></div>
 
         <section class="hobby-projects prose">
             <h2>Hobby Projects</h2>
             
             <div class="projects">
-                <a class="project">
+
+                <div class="project">
+                    <div class="title">
+                        <span class="name">Moss</span>
+                        <span class="dash"></span>
+                        <span class="quick-description">a custom scripting language</span>
+                    </div>
+                    <div class="image">
+                        <img src="./images/code.jpg">
+                    </div>
+                    <div class="description">
+                        Moss is a dynamically typed, interpreted scripting language. Designed for integration into other personal projects, like Sloth
+                    </div>
+                </div>
+                
+                <div class="seperator">
+                    <div class="scissors">✂️</div>
+                    <div class="spacer"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="project reversed">
+                    <div class="title">
+                        <span class="name">qcppu</span>
+                        <span class="dash"></span>
+                        <span class="quick-description">a <code>C++</code> frontend for qcpu</span>
+                    </div>
+                    <div class="image">
+                        <video src="./images/qcpu.mp4" muted loop playsinline>
+                    </div>
+                    <div class="description">
+                        qcppu (or qcpu++) is a <code>C++</code> fork of the original qcpu, it provides an interactive debugger, display spec & integrated IDE.
+                        <br></br>
+                        <span class="aside">qcpu is a fictional 16-bit CPU designed and written in <code>node.js</code> by my buddy <a class="cesque" href="https://twitter.com/cesque">@cesque</a>.</span>
+                        
+                    </div>
+                </div>
+
+                <div class="seperator reversed">
+                    <div class="scissors">✂️</div>
+                    <div class="spacer"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="project">
+                    <div class="title">
+                        <span class="name">Sloth</span>
+                        <span class="dash"></span>
+                        <span class="quick-description">a custom <code>C++</code> game engine</span>
+                    </div>
+                    <div class="image">
+                        <img src="./images/code.jpg">
+                    </div>
+                    <div class="description">
+                        A cross-platform <code>C++</code> 2D/3D game engine written using modern <code>C++</code> utilising open source libraries.
+                    </div>
+                </div>
+
+                <div class="seperator">
+                    <div class="scissors">✂️</div>
+                    <div class="spacer"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="project reversed">
                     <div class="title">
                         <span class="name">PICOPSP</span>
                         <span class="dash"></span>
-                        <span class="quick-description">a PICO-8 emulator for Sony PSP</span>
+                        <span class="quick-description">a PICO-8 emulator for the Sony PSP</span>
                     </div>
                     <div class="image">
                         <video src="./images/celeste.mp4" muted loop playsinline>
@@ -173,15 +263,15 @@
                         <abbr title="PICO-8 is a fantasy console for making, sharing and playing tiny games and other computer programs">PICO-8</abbr>
                         to run on a PSP.
                     </div>
-                </a>
+                </div>
 
-                <div class="seperator">
+                <div class="seperator reversed">
                     <div class="scissors">✂️</div>
                     <div class="spacer"></div>
                     <div class="line"></div>
                 </div>
 
-                <div class="project reversed">
+                <div class="project">
                     <div class="title">
                         <span class="name">Crawler</span>
                         <span class="dash"></span>
@@ -194,37 +284,15 @@
                         A more user-friendly, less ugly approach to the classic roguelike formula intended for mobile.
                     </div>
                 </div>
-
-                <div class="seperator reversed">
-                    <div class="scissors">✂️</div>
-                    <div class="spacer"></div>
-                    <div class="line"></div>
-                </div>
-
-                <div class="project">
-                    <div class="title">
-                        <span class="name">Moss</span>
-                        <span class="dash"></span>
-                        <span class="quick-description">a custom <code>C++</code> game engine</span>
-                    </div>
-                    <div class="image">
-                        <img src="./images/code.jpg">
-                    </div>
-                    <div class="description">
-                        A cross-platform <code>C++</code> 2D/3D game engine written using modern <code>C++</code> utilising open source libraries.
-                    </div>
-                </div>
             </div>
         </section>
-
-        <div class="image-seperator" style="background-image: url('./images/forest-path.jpg')"></div>
         
         <section class="game-jams prose">
             <h2>Game Jams</h2>
 
             <div class="projects">
                 
-                <a class="project" href="https://jenaa.itch.io/lo-fi-beats-to-find-objects-to" >
+                <div class="project" href="https://jenaa.itch.io/lo-fi-beats-to-find-objects-to" >
                     <div class="title">
                         <span class="name">lo&ndash;fi beats to find objects to</span>
                         <span class="dash"></span>
@@ -236,7 +304,7 @@
                     <div class="description">
                         A weekend long submission for the 2021 Global Game Jam. The theme was <b>"Lost & Found"</b>.
                     </div>
-                </a>
+                </div>
 
                 <div class="seperator">
                     <div class="scissors">✂️</div>
@@ -244,7 +312,7 @@
                     <div class="line"></div>
                 </div>
 
-                <a class="project reversed" href="https://syphonx.itch.io/snaaake">
+                <div class="project reversed" href="https://syphonx.itch.io/snaaake">
                     <div class="title">
                         <span class="name">Snaaake!</span>
                         <span class="dash"></span>
@@ -258,7 +326,7 @@
                         My entry for the 2020 <abbr title="Game Maker's Toolkit">GMTK</abbr>                       
                         Game Jam; the theme was <b>"Out of Control"</b>.
                     </div>
-                </a>
+                </div>
 
                 <div class="seperator reversed">
                     <div class="scissors">✂️</div>
@@ -266,7 +334,7 @@
                     <div class="line"></div>
                 </div>
 
-                <a class="project" href="https://syphonx.itch.io/bong-gmtk-2019-jam-entry">
+                <div class="project" href="https://syphonx.itch.io/bong-gmtk-2019-jam-entry">
                     <div class="title">
                         <span class="name">Bong!</span>
                         <span class="dash"></span>
@@ -278,17 +346,15 @@
                     <div class="description">
                         My entry for the 2019 <abbr title="Game Maker's Toolkit">GMTK</abbr> Game Jam; the theme was <b>"Only One"</b>.
                     </div>
-                </a>
+                </div>
             </div>
         </section>
-
-        <div class="image-seperator" style="background-image: url('./images/autumn-river.jpg'); background-size: cover;"></div>
         
         <section class="open-source prose">
 
             <h2>Open Source</h2>
 
-            <a class="project reversed" href="https://github.com/raysan5/raylib/blob/master/src/rnet.h">
+            <div class="project reversed" href="https://github.com/raysan5/raylib/blob/master/src/rnet.h">
                 <div class="title">
                     <span class="name">rnet</span>
                     <span class="dash"></span>
@@ -310,10 +376,11 @@
                         </span>
                     </p>
                 </div>
-            </a>
+            </div>
+
         </section>
 
-        <section class="open-source prose">
+        <section class="personal prose">
             <h2>Personal</h2>
 
             <div class="project">
@@ -321,26 +388,36 @@
                     <span class="name">Photography</span>
                 </div>
                 <div class="image">
-                    <img src="./images/tunnelme.jpg" width=400>
+                    <img src="./images/its_me_inbw.jpg">
                 </div>
                 <div class="description">
                     <p>
-                        I'm also an amateur photographer. I love to get lost in
-                        local parks spending the whole day taking pictures of
-                        the plants, trees &amp; wildlife.
+                        Recently i've been quite into Photography!
                     </p>
 
                     <p>
-                        In fact, all the photos on this page were taken by me!
+                        These days i own a couple of cameras:
+                        <ul>
+                            <li>Digital - <a href="https://en.wikipedia.org/wiki/Pentax_K-70">Pentax K70 ~2010s</a></li>
+                            <li>Film - <a href="https://www.lomography.com/magazine/271491-lomopedia-asahi-pentax-spotmatic"</a>Pentax Spotmatic ~1960s</li>
+                            <li>Film - <a href="https://www.lomography.com/magazine/328039-lomopedia-olympus-af-1"</a>Olympus AF-1 ~1980s</li>
+                        </ul>
+                        And a bunch of lenses:
+                        <ul>
+                            <li>Pentax-DA SMC 50mm f1.8</li>
+                            <li>Pentax-DA SMC 18-135mm f3.5-5.6</li>
+                            <li>Pentax SMC Takumar 50mm f2</li>
+                            <li>Pentax SMC Takumar 135mm f3.5</li>
+                            <li>Pentax SMC Takumar 28mm f2.8</li>
+                        </ul>
                     </p>
-
+                </div>
+                <div class="footer">
                     <p>
-                        I use a Canon EOS 550D with 2 lenses:
-
-                        <ul>
-                            <li>Canon EF-S 18-55mm f/3.5-5.6 III</li>
-                            <li>Sigma 70-300mm f/4-5.6 DG Macro</li>
-                        <ul>
+                        <span class="aside">Can you tell i like Pentax?</span>
+                    </p>
+                    <p>
+                        You can find some of my photos either on <a href="https://www.flickr.com/photos/jakbarnes/">Flickr</a> or <a href="https://www.instagram.com/jakbarnes_/">Instagram</a>. 
                     </p>
                 </div>
             </div>
@@ -351,24 +428,10 @@
             <div class="spacer"></div>
             <div class="line"></div>
         </div>
-
-        <section class="end prose">
-            <p>
-                <span>That's it!</span>
-            </p>
-            <p>
-                <span>If any of this caught your eye, drop me a message on</span>
-                <a href="https://twitter.com/jakbarnes"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg> twitter</a><span>, or you can</span>
-                <a href="mailto:contact@jakbarnes.co.uk"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="140" height="140"><g transform="matrix(10,0,0,10,0,0)"><path d="M0.500 1.750 L13.500 1.750 L13.500 12.250 L0.500 12.250 Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M.5,3.015,6.355,7.956a1,1,0,0,0,1.29,0L13.5,3.015" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> email me</a><span>.</span>
-            </p>
-            <p>
-                <span>Thanks for reading! 😊</span>
-            </p>
-        </section>
     </main>
     <footer>
         <div class="copyright">
-            Copyright © 2021 <a class="jakbarnes" href="/">Jak Barnes</a>
+            Copyright © 2022 <a class="jakbarnes" href="/">Jak Barnes</a>
         </div>
         <div class="favicon-attribution">
             favicon by <a class="zonalhaz" href="https://twitter.com/zonalhaz">@zonalhaz</a>
@@ -376,6 +439,6 @@
         <div class="attribution">
             made with <span class="❤" title="actually made with html and css and a lil bit of javascript 🙂">❤</span> by <a class="cesque" href="https://twitter.com/cesque">@cesque</a> &amp; <a class="coins" href="https://www.linkedin.com/in/thomas4de/">@supercoins</a>
         </div>
-    </footer>
+    </footer>    
 </body>
 </html>
